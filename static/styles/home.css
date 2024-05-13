@@ -1,0 +1,24 @@
+#upperRight{
+    width: 118px;
+    height: 85px;
+    position: absolute;
+    right: 20px;
+    filter: invert(100%);
+}
+body{
+    background-color: #87CEEB;
+}
+.initform{
+    border: 3px solid white;
+    border-radius: 5px;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+h1{
+    text-align: center;
+    padding-top: 20px;
+    font-family: "Lucida Console", Monaco, monospace;
+    color: white;
+    font-size: 65px;
+}
