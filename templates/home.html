@@ -5,12 +5,27 @@
         <meta name="viewport", content="width=device-width, initial-scale=1.0">
         <title>Running Workout Tracker</title>
         <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/home.css') }}">
+        <script src="{{ url_for('static', filename='styles/homeForm.js') }}"></script>
     </head>
     <body>
-        <img src="/static/styles/upperLeft.png" id="upperRight">
+        <div id="box1">
+            <img src="/static/styles/upperLeft.png" id="upperRight">
+        </div>
         <div class="initform">
             <h1>Welcome Back</h1>
-
+            <h2>MyRunner</h2>
+            <h3>Returning user? Sign in</h3>
+            <form action="">
+                <input type="text" id="user" name="user" value="" placeholder="Username:">
+                <br>
+                <input type="text" id="pass" name="pass"  value ="" placeholder="Password:">
+                <br>
+                <button type="reset" onclick="userInformation(this.form)">Submit</button>
+            </form>
+            <h6>@jhthirteen on GitHub</h6>
+            <h6>Powered by Flask</h6>
+            <h6>2024</h6>
         </div>
+        <div id="box2"></div>
     </body>
 </html>
