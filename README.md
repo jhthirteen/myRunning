@@ -14,3 +14,10 @@ Upon registering for the Philadelphia half marathon, I thought it could be cool 
 
 (5) Somehow upload running routes
 (6) Leverage some machine learning model to recommend new workouts -> new running routes / locations around me to run??
+
+**Progress**
+
+-> Added a functional GUI on the 'home' page that prompts for a login
+-> Figured out how to utilize a button element and load a subsequent user page with some JavaScript
+-> Figured out how to pass the user info as a url paramater and parse that upon the new page loading
+-> Tomorrow want to work on the user design and maybe get back to some C++ coding :)
