@@ -12,6 +12,7 @@ viewer for the classes they are taking and projects they are working on.
 
 **Progress**
 
+<<<<<<< HEAD
 (1) Have made the basic form and layout of the site, I want to add some more complexity to it in terms of how aesthetically
 pleasing it is (the CSS aspect of the project!)
 (2) Currently learning the basics of SQL and working with the PostgreSQL framework
