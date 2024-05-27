@@ -4,16 +4,15 @@
         <meta charset="UTF-8">
         <meta name="viewport", content="width=device-width, initial-scale=1.0">
         <title>Running Workout Tracker</title>
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/home.css') }}">
-        <script src="{{ url_for('static', filename='styles/homeForm.js') }}"></script>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/user.css') }}">
     </head>
     <body>
-        <div id = "test">
+        <div id = "header">
             <script>
                 var t = new URLSearchParams(window.location.search).get('inputData');
                 var p = document.createElement("p");
                 p.textContent = t;
-                document.getElementById("test").appendChild(p);
+                document.getElementById("header").appendChild(p);
             </script>
         </div>
     </body>

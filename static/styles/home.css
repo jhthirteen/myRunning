@@ -1,7 +1,7 @@
 #upperRight{
-    width: 118px;
-    height: 85px;
-    filter: invert(100%);
+    width: 138px;
+    height: 113px;
+    filter: brightness(0) invert(1);
 }
 #box1{
     width: 150px;
@@ -14,20 +14,38 @@ body{
     background-color: #87CEEB;
 }
 .initform{
-    border: 3px solid white;
-    border-radius: 5px;
     margin: auto;
     text-align: center;
     justify-content: center;
     align-items: center;
     padding: 10px 20px;
+    display: inline-block;
 }
+
+@keyframes typing{
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret{
+    from, to { border-color: transparent }
+    50% { border-color: #007FFF; }
+}
+
 h1{
     text-align: center;
     font-family: Tahoma, "Trebuchet MS", sans-serif;
     color: white;
     font-size: 65px;
+    overflow: hidden;
+    border-right: .15em solid #007FFF;
+    white-space: nowrap;
+    width: 0;
+    animation: 
+        typing 1s steps(20, end) forwards,
+        blink-caret .75s step-end infinite;
 }
+
 h2{
     text-align: center;
     font-family: Tahoma, "Trebuchet MS", sans-serif;

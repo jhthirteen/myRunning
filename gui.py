@@ -1,4 +1,6 @@
 from flask import Flask, render_template, request
+from markupsafe import escape
+
 app = Flask(__name__)
 
 
@@ -9,7 +11,7 @@ def home():
 @app.route("/user")
 def user():
     inputName = request.args.get('inputData')
-    return render_template('user.html', input_data=inputName)
+    return render_template('user.html', input_data=escape(inputName))
 
 @app.route("/workouts")
 def workouts():

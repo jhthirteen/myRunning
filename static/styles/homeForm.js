@@ -4,4 +4,3 @@ function userInformation(form){
     var url = '/user?inputData=' + encodeURIComponent(userName)
     window.location.href = url;
 }
-
