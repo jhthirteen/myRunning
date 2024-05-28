@@ -30,6 +30,7 @@ body{
 @keyframes blink-caret{
     from, to { border-color: transparent }
     50% { border-color: #007FFF; }
+    100% { border-color: transparent }
 }
 
 h1{
