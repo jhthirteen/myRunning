@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def default():
-    return redirect('/home')
+    return redirect('/home?loginMessage=False')
 
 @app.route("/home")
 def home():
@@ -26,7 +26,7 @@ def user():
     if( existance ):
         return render_template('user.html', input_data=escape(inputName))
     else:
-        return redirect('/home')
+        return redirect('/home?loginMessage=True')
 
 
 if __name__ == '__main__':

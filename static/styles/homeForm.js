@@ -6,5 +6,9 @@ function userInformation(form){
 }
 
 function loginFailed(){
-    alert("Login attempt failed. Please retry")
+    var params = new URLSearchParams(document.location.search);
+    var flash = params.get("loginMessage");
+    if( flash == "True" ){
+        alert("Login attempt failed, please try again.")
+    }
 }
