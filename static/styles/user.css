@@ -1,8 +1,28 @@
 body{
     background-color: #87CEEB;
 }
-p{
+
+#userNameText{
     font-family: Tahoma, "Trebuchet MS", sans-serif;
+    font-size: 35px;
     color: white;
-    font-size: 65px;
+}
+#views{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 300px;
+    padding-right: 300px;
+}
+button{
+    border: none;
+    background: none;
+    font-family: Tahoma, "Trecuchet MS", sans-serif;
+    font-size: 15px;
+    color: white;
+}
+button:hover{
+    font-size: 15px;
+    color: #007FFF;
+    text-decoration: underline;
 }

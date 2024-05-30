@@ -7,12 +7,22 @@
         <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/user.css') }}">
     </head>
     <body>
-        <div id = "header">
+        <div>
+            <nav id="views">
+                <button id="day">Daily View</button>
+                <button id="weekly">Weekly View</button>
+                <button id ="monthly">Monthly View</button>
+            </nav>
+        </div>
+        <div id="userContainer">
             <script>
                 var t = new URLSearchParams(window.location.search).get('inputData');
+                var tLocation = t.indexOf(' ')
+                var tText = t.substring(0, tLocation)
                 var p = document.createElement("p");
-                p.textContent = t;
-                document.getElementById("header").appendChild(p);
+                p.setAttribute("id", "userNameText")
+                p.textContent = tText;
+                document.getElementById("userContainer").appendChild(p);
             </script>
         </div>
     </body>
