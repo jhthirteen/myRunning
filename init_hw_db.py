@@ -4,13 +4,17 @@ connection = psycopg2.connect(host="localhost", database="hw_db",user="jack", pa
 
 current = connection.cursor()
 
-current.execute('DROP TABLE IF EXISTS users;')
+#current.execute('''
+#               CREATE TABLE users (
+#                id serial PRIMARY KEY,
+#                username varchar(20) NOT NULL,
+#               date_added date DEFAULT CURRENT_TIMESTAMP
+#                );
+#                ''')
+
 current.execute('''
-                CREATE TABLE users (
-                id serial PRIMARY KEY,
-                username varchar(20) NOT NULL,
-                password varchar(20) NOT NULL,
-                date_added date DEFAULT CURRENT_TIMESTAMP
+                CREATE TABLE userDailyTasks (
+                1 int
                 );
                 ''')
 

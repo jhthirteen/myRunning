@@ -1,10 +1,24 @@
 body{
     background-color: #87CEEB;
+    margin: 0;
 }
-
+#interfaceContainer{
+    display: flex;
+    width: 90%;
+    margin: 20px auto;
+    height: 90vh;
+    border: 2px solid #007FFF;
+    border-radius: 20px;
+}
+#userContainer{
+    width: 250px;
+    height: 100%;
+    text-align: center;
+    border-right: 2px solid #007FFF;
+}
 #userNameText{
     font-family: Tahoma, "Trebuchet MS", sans-serif;
-    font-size: 35px;
+    font-size: 20px;
     color: white;
 }
 #views{
@@ -13,6 +27,7 @@ body{
     justify-content: space-between;
     padding-left: 300px;
     padding-right: 300px;
+    padding-top: 20px;
 }
 button{
     border: none;

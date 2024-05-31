@@ -14,15 +14,17 @@
                 <button id ="monthly">Monthly View</button>
             </nav>
         </div>
-        <div id="userContainer">
-            <script>
-                var t = new URLSearchParams(window.location.search).get('inputData');
-                var tLocation = t.indexOf(' ')
-                var tText = t.substring(0, tLocation)
-                var p = document.createElement("p");
-                p.setAttribute("id", "userNameText")
-                p.textContent = tText;
-                document.getElementById("userContainer").appendChild(p);
-            </script>
+        <div id="interfaceContainer">
+            <div id="userContainer">
+                <script>
+                    var t = new URLSearchParams(window.location.search).get('inputData');
+                    var tLocation = t.indexOf(' ');
+                    var tText = "Welcome back, " + t.substring(0, tLocation);
+                    var p = document.createElement("p");
+                    p.setAttribute("id", "userNameText");
+                    p.textContent = tText;
+                    document.getElementById("userContainer").appendChild(p);
+                </script>
+            </div>
         </div>
     </body>
