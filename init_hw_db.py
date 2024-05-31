@@ -4,24 +4,19 @@ connection = psycopg2.connect(host="localhost", database="hw_db",user="jack", pa
 
 current = connection.cursor()
 
-#current.execute('''
-#               CREATE TABLE users (
-#                id serial PRIMARY KEY,
-#                username varchar(20) NOT NULL,
-#               date_added date DEFAULT CURRENT_TIMESTAMP
-#                );
-#                ''')
-
 current.execute('''
                 CREATE TABLE userDailyTasks (
-                1 int
+                user_id int,
+                task varchar(50) NOT NULL,
+                due_date varchar(10),
+                completed int
                 );
                 ''')
 
 current.execute('''
-                INSERT INTO users (username, password) 
-                VALUES (%s, %s)          
-                ''', ('jackHunter', 'testPassword'))
+                INSERT INTO userDailyTasks (user_id, task, due_date, completed)
+                VALUES (%s, %s, %s, %s)
+                ''', (1, 'Math Homework', '6/10/24', 0))
 
 connection.commit()
 

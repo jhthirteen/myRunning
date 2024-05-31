@@ -6,20 +6,30 @@ body{
     display: flex;
     width: 90%;
     margin: 20px auto;
-    height: 90vh;
+    height: 85vh;
     border: 2px solid #007FFF;
     border-radius: 20px;
 }
 #userContainer{
+    display: flex;
+    flex-direction: column;
     width: 250px;
     height: 100%;
     text-align: center;
     border-right: 2px solid #007FFF;
+    border-bottom: 2px solid #007FFF;
 }
 #userNameText{
     font-family: Tahoma, "Trebuchet MS", sans-serif;
     font-size: 20px;
     color: white;
+}
+#toggles{
+    height: 100%;
+    text-align: center;
+    border-top: 2px solid #007FFF;
+    width: 90%;
+    margin: 0 auto;
 }
 #views{
     display: flex;
@@ -40,4 +50,9 @@ button:hover{
     font-size: 15px;
     color: #007FFF;
     text-decoration: underline;
+}
+li{
+    font-family: Tahoma, "Trebuchet MS", sans-serif;
+    font-size: 15px;
+    color: white;
 }
