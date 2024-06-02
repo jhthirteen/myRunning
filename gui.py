@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for
 from markupsafe import escape
 import psycopg2
-from cleanOutput import checkIfUser
+from cleanOutput import checkIfUser, findClasses
 
 app = Flask(__name__)
 
@@ -22,6 +22,13 @@ def user():
     current.execute('SELECT username, password FROM users')
     dbOutput = current.fetchall()
     existance = checkIfUser(dbOutput, inputName)
+
+    current.execute("SELECT id FROM users WHERE username='jackHunter'")
+    userId = current.fetchall()
+
+    current.execute('SELECT * FROM userClasses')
+    classOutput = current.fetchall()
+    listOfClasses = findClasses(classOutput, userId)
 
     if( existance ):
         return render_template('user.html', input_data=escape(inputName))

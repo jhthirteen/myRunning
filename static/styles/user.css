@@ -17,7 +17,6 @@ body{
     height: 100%;
     text-align: center;
     border-right: 2px solid #007FFF;
-    border-bottom: 2px solid #007FFF;
 }
 #userNameText{
     font-family: Tahoma, "Trebuchet MS", sans-serif;
@@ -30,6 +29,7 @@ body{
     border-top: 2px solid #007FFF;
     width: 90%;
     margin: 0 auto;
+    padding-top: 75px;
 }
 #views{
     display: flex;
