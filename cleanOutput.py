@@ -11,7 +11,24 @@ def findClasses(data, id):
     classes = []
     for i in range(len(data)):
         if( data[i][0] == id[0][0] ):
-            classes.append(data[i][1])
+            numWords = 0
+            splitIndexes = []
+            runningIndex = 0
+            classFormatted = ""
+            for c in data[i][1]:
+                if( c.isupper() ):
+                    numWords += 1
+                    splitIndexes.append(runningIndex)
+                runningIndex += 1
+            initial = 0
+            for j in range(len(splitIndexes)):
+                if( splitIndexes[j] == 0 ):
+                    continue
+                classFormatted = classFormatted + data[i][1][initial:splitIndexes[j]] + " "
+                initial = splitIndexes[j]
+            classFormatted = classFormatted + data[i][1][initial:len(data[i][1])]
+            classes.append(classFormatted)
+
     return classes
 
 def combineInput(login, classes):
