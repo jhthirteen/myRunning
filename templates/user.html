@@ -17,12 +17,11 @@
         <div id="interfaceContainer">
             <div id="userContainer">
                 <script>
-                    var t = new URLSearchParams(window.location.search).get('inputData');
-                    var tLocation = t.indexOf(' ');
-                    var tText = "Welcome back, " + t.substring(0, tLocation);
+                    var dataList = JSON.parse('{{ input_data|tojson|safe }}');
+                    var txt = "Welcome back, " + dataList[0];
                     var p = document.createElement("p");
                     p.setAttribute("id", "userNameText");
-                    p.textContent = tText;
+                    p.textContent = txt;
                     document.getElementById("userContainer").appendChild(p);
                 </script>
                 <div id="toggles">
@@ -37,7 +36,12 @@
                 <div id="toggles">
                     <ul id="classes">
                         <script>
-                            
+                            var dataList = JSON.parse('{{ input_data|tojson|safe }}');
+                            for( let i = 1; i < dataList.length; i++ ){
+                               var l = document.createElement("li");
+                               l.textContent = dataList[i];
+                               document.getElementById("classes").appendChild(l); 
+                            }
                         </script>
                     </ul>
                 </div>

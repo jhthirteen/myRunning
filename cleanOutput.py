@@ -13,3 +13,8 @@ def findClasses(data, id):
         if( data[i][0] == id[0][0] ):
             classes.append(data[i][1])
     return classes
+
+def combineInput(login, classes):
+    userPass = login.split()
+    classes = [userPass[0]] + classes #adding our username as the first argument to their classlist
+    return classes
